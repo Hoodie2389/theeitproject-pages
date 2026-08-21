@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get Involved &amp; Contact Us | The EIT Project</title>
+  <meta name="description" content="Get involved with The EIT Project. Sign up to be an EIT Ambassador, join as an EIT musician, or send us a message. Based in Singapore." />
+  <meta property="og:title" content="Contact | The EIT Project" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;1,6..96,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo" aria-label="The EIT Project home">
+        <img src="assets/img/logo.png" alt="The EIT Project logo" />
+        <span>The EIT Project</span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="initiatives.html">Initiatives</a></li>
+          <li><a href="contact.html" class="active">Get Involved &amp; Contact Us</a></li>
+        </ul>
+      </nav>
+      <a href="contact.html" class="btn btn-primary nav-cta">Join the Movement</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===================== PAGE HERO ===================== -->
+  <section class="hero hero--cream" style="min-height:52vh;">
+    <div class="hero__bg"><img src="assets/img/contact-bg.jpg" alt="" loading="eager" /></div>
+    <div class="container">
+      <div class="hero__content" style="max-width:760px;">
+        <span class="eyebrow">Get Involved &amp; Connect with Us</span>
+        <h1 style="margin-top:14px;">Join the <span class="gold-word">movement</span>.</h1>
+        <p class="hero__lead">We invite you to be part of our mission. Whether through support, community engagement, or direct collaboration, your involvement helps us transform lives through the universal language of music.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== WAY TO GET INVOLVED ===================== -->
+  <section class="pad-y">
+    <div class="container">
+      <div class="chips">
+        <article class="chip reveal" data-delay="1">
+          <span class="kicker">Get involved</span>
+          <h3>Sign up to be an EIT Ambassador</h3>
+          <p>Become part of a global movement dedicated to musical expression and social impact. Connect with fellow musicians and enthusiasts who believe in the power of music to transform lives together.</p>
+          <a href="#contactForm" class="btn btn-ghost" style="margin-top:16px;padding:11px 22px;font-size:.9rem;">Become an Ambassador</a>
+        </article>
+        <article class="chip reveal" data-delay="2">
+          <span class="kicker">For musicians</span>
+          <h3>Be an EIT musician</h3>
+          <p>Get in touch. We are always looking for new voices to join the harmony. Whether you have a question about our programs, want to collaborate, or simply want to say hello, we'd love to hear from you.</p>
+          <a href="#contactForm" class="btn btn-ghost" style="margin-top:16px;padding:11px 22px;font-size:.9rem;">Get in touch</a>
+        </article>
+      </div>
+
+      <!-- ===================== CONTACT INFO + FORM ===================== -->
+      <div class="contact-grid" id="contactForm">
+        <div class="contact-info reveal">
+          <span class="eyebrow">Get in touch</span>
+          <h2>Send us a <span class="gold-word">message</span></h2>
+          <p>Have a question, an idea, or want to lend a hand — we'd love to hear from you.</p>
+
+          <div class="info-block">
+            <span class="ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            </span>
+            <div>
+              <h4>Email us</h4>
+              <a href="mailto:contact@theeitproject.com">contact@theeitproject.com</a>
+            </div>
+          </div>
+
+          <div class="info-block">
+            <span class="ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.4-7-11a7 7 0 0 1 14 0c0 4.6-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            </span>
+            <div>
+              <h4>Our location</h4>
+              <p>Singapore</p>
+            </div>
+          </div>
+
+          <div class="info-block" style="margin-bottom:0;">
+            <span class="ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+            </span>
+            <div>
+              <h4>Follow us</h4>
+              <a href="https://www.instagram.com/theeitproject/" target="_blank" rel="noopener">@theeitproject on Instagram</a>
+            </div>
+          </div>
+        </div>
+
+        <form class="reveal" data-delay="1" id="contactFormEl" novalidate>
+          <legend>Send a Message</legend>
+          <div class="form-row">
+            <div class="field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your full name" required />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required />
+            </div>
+          </div>
+          <div class="field">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="How can we help?" />
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;">Send Message</button>
+          <p class="form-note">We'll get back to you within a few business days.</p>
+          <p class="form-status" id="formStatus" role="status">Thank you — your message has been received. We'll be in touch soon!</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== BANNER ===================== -->
+  <section class="banner">
+    <div class="banner__bg"><img src="assets/img/hero-bg.jpg" alt="" loading="lazy" /></div>
+    <div class="container">
+      <span class="eyebrow reveal">Together</span>
+      <h2 class="reveal" data-delay="1">Your voice matters <span class="tagline-words">here</span>.</h2>
+      <a href="mailto:contact@theeitproject.com" class="btn btn-light reveal" data-delay="2">Email us directly</a>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" /> <span>The EIT Project</span></a>
+        <p>A non-profit dedicated to uplifting lives through music enrichment and community connection.</p>
+        <p class="tagline">Empowering music, inspiring change together.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="initiatives.html">Initiatives</a>
+        <a href="contact.html">Get Involved &amp; Contact Us</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="mailto:contact@theeitproject.com">contact@theeitproject.com</a>
+        <a href="https://www.instagram.com/theeitproject/" target="_blank" rel="noopener">Instagram</a>
+        <div class="footer-social">
+          <a href="mailto:contact@theeitproject.com" aria-label="Email us" title="Email us">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          </a>
+          <a href="https://www.instagram.com/theeitproject/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>©2026 The EIT Project. All rights reserved.</span>
+      <span>Empowering Music, Inspiring Change Together</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
