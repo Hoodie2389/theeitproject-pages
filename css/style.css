@@ -454,6 +454,15 @@ section { position: relative; }
 }
 .vision-point h3 { font-size: 1.35rem; margin-bottom: 10px; }
 .vision-point p { font-size: .96rem; }
+.vision-point > .impact-number {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 5vw, 4.4rem);
+  line-height: 1;
+  letter-spacing: -.03em;
+  text-transform: none;
+  color: var(--gold-dark);
+  margin-bottom: 16px;
+}
 
 /* ---- EIT stories ------------------------------------------------------ */
 .stories-section { background: var(--white); }

@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../css/style.css?v=20260822-6" />
+  <link rel="stylesheet" href="../css/style.css?v=20260822-10" />
 </head>
 <body>
 
@@ -38,9 +38,18 @@
           <li><a href="../about.html">About Us</a></li>
           <li><a href="../initiatives.html" class="active">Initiatives</a></li>
           <li><a href="../contact.html">Get Involved &amp; Contact Us</a></li>
+          <li class="nav-mobile-actions">
+            <a href="../support.html" class="btn btn-gold">Support</a>
+            <a href="../contact.html#contactForm" class="btn btn-light" data-form-link="volunteer">Volunteer</a>
+            <a href="../contact.html#contactForm" class="btn btn-primary" data-form-link="member">Be a Member</a>
+          </li>
         </ul>
       </nav>
-      <a href="../contact.html" class="btn btn-primary nav-cta">Join the Movement</a>
+      <div class="header-actions" aria-label="Get involved">
+        <a href="../support.html" class="btn btn-gold">Support</a>
+        <a href="../contact.html#contactForm" class="btn btn-light" data-form-link="volunteer">Volunteer</a>
+        <a href="../contact.html#contactForm" class="btn btn-primary" data-form-link="member">Be a Member</a>
+      </div>
       <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
         <span></span><span></span><span></span>
       </button>
@@ -122,6 +131,6 @@
     </div>
   </footer>
 
-  <script src="../js/main.js?v=20260822-1"></script>
+  <script src="../js/main.js?v=20260822-2"></script>
 </body>
 </html>

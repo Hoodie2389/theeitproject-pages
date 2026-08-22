@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=20260822-6" />
+  <link rel="stylesheet" href="css/style.css?v=20260822-10" />
 </head>
 <body>
 
@@ -38,9 +38,18 @@
           <li><a href="about.html" class="active">About Us</a></li>
           <li><a href="initiatives.html">Initiatives</a></li>
           <li><a href="contact.html">Get Involved &amp; Contact Us</a></li>
+          <li class="nav-mobile-actions">
+            <a href="support.html" class="btn btn-gold">Support</a>
+            <a href="contact.html#contactForm" class="btn btn-light" data-form-link="volunteer">Volunteer</a>
+            <a href="contact.html#contactForm" class="btn btn-primary" data-form-link="member">Be a Member</a>
+          </li>
         </ul>
       </nav>
-      <a href="contact.html" class="btn btn-primary nav-cta">Join the Movement</a>
+      <div class="header-actions" aria-label="Get involved">
+        <a href="support.html" class="btn btn-gold">Support</a>
+        <a href="contact.html#contactForm" class="btn btn-light" data-form-link="volunteer">Volunteer</a>
+        <a href="contact.html#contactForm" class="btn btn-primary" data-form-link="member">Be a Member</a>
+      </div>
       <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
         <span></span><span></span><span></span>
       </button>
@@ -65,34 +74,6 @@
       <blockquote class="pull reveal" style="max-width:820px; text-align:center; border:none; padding:0;">
         We hope that through the EIT Project we inspire and spread enrichment, happiness, and fulfillment to all who encounter music.
       </blockquote>
-    </div>
-  </section>
-
-  <!-- ===================== VALUES & VISION ===================== -->
-  <section class="pad-y" style="background: var(--cream-2);">
-    <div class="container">
-      <div class="section-head center reveal">
-        <span class="eyebrow">Values &amp; Vision</span>
-        <h2>What We Stand For</h2>
-        <p>We hope to provide a platform for aspiring musicians to express themselves through music, and use their creative expression to uplift others in their community.</p>
-      </div>
-      <div class="values">
-        <div class="value-tile reveal" data-delay="1">
-          <span class="kicker">Empower</span>
-          <h3>The individual</h3>
-          <p>We believe in the power of the individual to create change through sound.</p>
-        </div>
-        <div class="value-tile reveal" data-delay="2">
-          <span class="kicker">Inspire</span>
-          <h3>Cultures</h3>
-          <p>Inspiring bridges between cultures through the universal language of music.</p>
-        </div>
-        <div class="value-tile reveal" data-delay="3">
-          <span class="kicker">Together</span>
-          <h3>Our roots</h3>
-          <p>Staying true to our roots and building a powerful community where music can tie us all together.</p>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -171,6 +152,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=20260822-1"></script>
+  <script src="js/main.js?v=20260822-2"></script>
 </body>
 </html>
