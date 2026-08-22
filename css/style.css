@@ -289,6 +289,23 @@ section { position: relative; }
 .hero__actions { display: flex; flex-wrap: wrap; gap: 14px; }
 
 /* ---- Homepage carousel ------------------------------------------------ */
+.hero--carousel {
+  display: block;
+  min-height: 0;
+  padding: calc(var(--nav-h) + 22px) clamp(16px, 3vw, 40px) 24px;
+  background: var(--cream);
+  overflow: visible;
+}
+.carousel-shell { width: min(100%, 1320px); margin-inline: auto; }
+.hero--carousel .hero-carousel {
+  position: relative;
+  inset: auto;
+  aspect-ratio: 16 / 7;
+  z-index: 0;
+  border: 1px solid rgba(156,121,69,.32);
+  border-radius: 16px;
+  box-shadow: var(--shadow-md);
+}
 .hero-carousel {
   position: absolute;
   inset: 0;
@@ -368,6 +385,20 @@ section { position: relative; }
   align-items: center;
   gap: 14px;
 }
+.hero--carousel .carousel-controls {
+  position: static;
+  transform: none;
+  justify-content: center;
+  margin-top: 16px;
+}
+.hero--carousel .carousel-arrow {
+  border-color: rgba(124,95,50,.4);
+  background: var(--white);
+  color: var(--ink);
+  box-shadow: var(--shadow-sm);
+}
+.hero--carousel .carousel-dot { background: rgba(124,95,50,.25); }
+.hero--carousel .carousel-dot.is-active { background: var(--gold); }
 .carousel-arrow {
   width: 38px;
   height: 38px;
@@ -898,6 +929,14 @@ form legend { font-family: var(--font-display); font-size: 1.5rem; padding: 0 12
   .hero-placeholder { align-items: center; padding-right: 0; }
   .hero-placeholder span, .hero-placeholder small { opacity: .34; }
   .hero-slide--photo .hero-slide__image { object-position: center; }
+  .hero--carousel {
+    padding: calc(var(--nav-h) + 12px) 12px 18px;
+  }
+  .hero--carousel .hero-carousel {
+    aspect-ratio: 4 / 3;
+    border-radius: 10px;
+  }
+  .hero--carousel .carousel-controls { margin-top: 12px; }
   .vision-intro { text-align: center; }
   .vision-intro .eyebrow { justify-content: center; }
   .vision-points { grid-template-columns: 1fr; }
