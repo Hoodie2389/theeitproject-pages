@@ -66,7 +66,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=20260822-7" />
+  <link rel="stylesheet" href="css/style.css?v=20260822-8" />
 </head>
 <body>
 
@@ -105,19 +105,9 @@
         <div class="hero-placeholder hero-placeholder--three"><span>Picture 3</span><small>Photo coming soon</small></div>
       </div>
     </div>
-    <div class="container">
-      <div class="hero__content">
-        <span class="eyebrow">Singapore Music Initiative</span>
-        <h1 class="hero__title">The EIT Project</h1>
-        <p class="hero__support">A Singapore-based music enrichment initiative.</p>
-        <p class="hero__tagline">Empowering music, inspiring change&nbsp;together.</p>
-        <p class="hero__lead">Based in Singapore, we use music enrichment, performances, and community programmes to connect people, empower individuals, and transform lives.</p>
-        <div class="hero__actions">
-          <a href="support.html" class="btn btn-gold">Support</a>
-          <a href="contact.html#contactForm" class="btn btn-light" data-form-link="volunteer">Volunteer</a>
-          <a href="contact.html#contactForm" class="btn btn-light" data-form-link="member">Be a Member</a>
-        </div>
-      </div>
+    <div class="visually-hidden">
+      <h1>The EIT Project</h1>
+      <p>A Singapore-based music enrichment initiative.</p>
     </div>
     <div class="carousel-controls" aria-label="Carousel controls">
       <button class="carousel-arrow" type="button" data-carousel-prev aria-label="Previous picture">&#8592;</button>
@@ -136,7 +126,11 @@
       <span class="eyebrow">Join the Community</span>
       <h2>Start your journey as an EIT member</h2>
       <p>Become part of a community using music to inspire, connect, and create meaningful experiences across Singapore.</p>
-      <a href="contact.html#contactForm" class="btn btn-primary" data-form-link="member">Be a Member</a>
+      <div class="journey-actions">
+        <a href="support.html" class="btn btn-gold">Support</a>
+        <a href="contact.html#contactForm" class="btn btn-light" data-form-link="volunteer">Volunteer</a>
+        <a href="contact.html#contactForm" class="btn btn-light" data-form-link="member">Be a Member</a>
+      </div>
     </div>
   </section>
 
@@ -192,6 +186,21 @@
           <h3>Our community</h3>
           <p>Bring people together through music and meaningful participation.</p>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EIT STORIES ===================== -->
+  <section class="stories-section pad-y" aria-labelledby="storiesTitle">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Our Community</span>
+        <h2 id="storiesTitle">EIT Stories</h2>
+      </div>
+      <div class="stories-grid" aria-label="Story placeholders">
+        <article class="story-placeholder reveal" data-delay="1"><span>Story 1</span><small>Content coming soon</small></article>
+        <article class="story-placeholder reveal" data-delay="2"><span>Story 2</span><small>Content coming soon</small></article>
+        <article class="story-placeholder reveal" data-delay="3"><span>Story 3</span><small>Content coming soon</small></article>
       </div>
     </div>
   </section>
