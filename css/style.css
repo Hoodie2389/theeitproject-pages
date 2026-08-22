@@ -603,22 +603,35 @@ form legend { font-family: var(--font-display); font-size: 1.5rem; padding: 0 12
 }
 
 @media (max-width: 760px) {
-  :root { --nav-h: 84px; }
-  .site-header {
-    background: linear-gradient(180deg, rgba(250, 247, 240, .96) 0%, rgba(250, 247, 240, .76) 58%, rgba(250, 247, 240, 0) 100%);
-    -webkit-backdrop-filter: none;
-    backdrop-filter: none;
-    box-shadow: none;
-  }
+  :root { --nav-h: 72px; }
+  .site-header,
   .site-header.scrolled {
-    background: linear-gradient(180deg, rgba(250, 247, 240, .96) 0%, rgba(250, 247, 240, .76) 58%, rgba(250, 247, 240, 0) 100%);
+    background: transparent;
     -webkit-backdrop-filter: none;
     backdrop-filter: none;
     box-shadow: none;
   }
-  .hamburger { display: flex; }
+  .hamburger {
+    display: flex;
+    width: 46px;
+    height: 46px;
+    padding: 13px 9px;
+    border-radius: 50%;
+    background: rgba(250, 247, 240, .9);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-sm);
+  }
   .site-header .nav-cta { display: none; }
-  .site-header .nav-inner { padding-inline: 18px; }
+  .site-header .nav-inner { padding-inline: 16px; }
+  .logo {
+    padding: 4px;
+    border-radius: 999px;
+    background: rgba(250, 247, 240, .9);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-sm);
+  }
   .logo img { height: 42px; }
   .logo span { font-size: 1.05rem; }
   .nav-links {
