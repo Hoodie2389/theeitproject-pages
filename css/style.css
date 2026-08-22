@@ -23,7 +23,7 @@
   --radius-sm:  10px;
   --maxw:       1180px;
   --nav-h:      76px;
-  --font-display: "Bodoni Moda", "Playfair Display", Georgia, serif;
+  --font-display: "Playfair Display", Georgia, serif;
   --font-body:    "Inter", "Helvetica Neue", Arial, sans-serif;
   --ease:       cubic-bezier(.2, .7, .2, 1);
 }
@@ -46,7 +46,7 @@ img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
 h1, h2, h3, h4, h5 {
   font-family: var(--font-display);
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.15;
   letter-spacing: -0.01em;
   color: var(--ink);
@@ -598,10 +598,17 @@ form legend { font-family: var(--font-display); font-size: 1.5rem; padding: 0 12
 }
 
 @media (max-width: 760px) {
+  :root { --nav-h: 68px; }
   .hamburger { display: flex; }
+  .site-header .nav-cta { display: none; }
+  .site-header .nav-inner { padding-inline: 18px; }
+  .logo img { height: 42px; }
+  .logo span { font-size: 1.05rem; }
   .nav-links {
     position: fixed;
-    inset: 0 0 100% 0;
+    inset: 0;
+    height: 100dvh;
+    overflow-y: auto;
     flex-direction: column;
     justify-content: flex-start;
     gap: 8px;
@@ -614,13 +621,20 @@ form legend { font-family: var(--font-display); font-size: 1.5rem; padding: 0 12
   }
   .nav-links.open { transform: translateY(0); }
   .nav-links a { font-size: 1.25rem; padding: 14px 16px; width: 100%; }
-  .nav-cta { margin-left: 0; margin-top: 10px; width: 100%; }
   .split, .pillars, .card-grid, .values, .chips, .form-row { grid-template-columns: 1fr; }
   .split__media::before { inset: 12px; }
   .hero__content { text-align: center; margin: 0 auto; }
   .hero__actions { justify-content: center; }
   .section-head { text-align: center; }
   .eyebrow { justify-content: center; }
+}
+
+@media (max-width: 520px) {
+  .container { padding-inline: 20px; }
+  .logo span { display: none; }
+  .hero__content { padding: 64px 0 76px; }
+  .hero__actions { flex-direction: column; align-items: stretch; gap: 12px; }
+  .hero__actions .btn { width: 100%; padding: 14px 22px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
