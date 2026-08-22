@@ -4,15 +4,20 @@
 (function () {
   'use strict';
 
-  /* ---- Header: add "scrolled" state on scroll ------------------------- */
+  /* ---- Header: become solid when the opening hero has passed ---------- */
   var header = document.getElementById('siteHeader');
+  var openingHero = document.querySelector('.hero');
   var onScroll = function () {
     if (!header) return;
-    if (window.scrollY > 24) header.classList.add('scrolled');
+    var solidAt = openingHero
+      ? openingHero.offsetTop + openingHero.offsetHeight - header.offsetHeight
+      : 24;
+    if (window.scrollY >= solidAt) header.classList.add('scrolled');
     else header.classList.remove('scrolled');
   };
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
 
   /* ---- Mobile navigation toggle --------------------------------------- */
   var hamburger = document.getElementById('hamburger');
