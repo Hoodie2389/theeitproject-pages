@@ -66,7 +66,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=20260822-6" />
+  <link rel="stylesheet" href="css/style.css?v=20260822-7" />
 </head>
 <body>
 
@@ -85,7 +85,7 @@
           <li><a href="contact.html">Get Involved &amp; Contact Us</a></li>
         </ul>
       </nav>
-      <a href="contact.html" class="btn btn-primary nav-cta">Join the Movement</a>
+      <a href="contact.html#contactForm" class="btn btn-primary nav-cta" data-form-link="member">Be a Member</a>
       <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
         <span></span><span></span><span></span>
       </button>
@@ -94,7 +94,17 @@
 
   <!-- ===================== HERO ===================== -->
   <section class="hero hero--light" id="top">
-    <div class="hero__bg"><img src="assets/img/hero-bg.jpg?v=20260822-2" alt="" loading="eager" /></div>
+    <div class="hero-carousel" id="heroCarousel" aria-label="Featured EIT Project photographs">
+      <div class="hero-slide is-active" aria-hidden="false">
+        <div class="hero-placeholder hero-placeholder--one"><span>Picture 1</span><small>Photo coming soon</small></div>
+      </div>
+      <div class="hero-slide" aria-hidden="true">
+        <div class="hero-placeholder hero-placeholder--two"><span>Picture 2</span><small>Photo coming soon</small></div>
+      </div>
+      <div class="hero-slide" aria-hidden="true">
+        <div class="hero-placeholder hero-placeholder--three"><span>Picture 3</span><small>Photo coming soon</small></div>
+      </div>
+    </div>
     <div class="container">
       <div class="hero__content">
         <span class="eyebrow">Singapore Music Initiative</span>
@@ -103,12 +113,31 @@
         <p class="hero__tagline">Empowering music, inspiring change&nbsp;together.</p>
         <p class="hero__lead">Based in Singapore, we use music enrichment, performances, and community programmes to connect people, empower individuals, and transform lives.</p>
         <div class="hero__actions">
-          <a href="contact.html" class="btn btn-gold">Join the Movement</a>
-          <a href="contact.html" class="btn btn-light">Volunteer</a>
+          <a href="support.html" class="btn btn-gold">Support</a>
+          <a href="contact.html#contactForm" class="btn btn-light" data-form-link="volunteer">Volunteer</a>
+          <a href="contact.html#contactForm" class="btn btn-light" data-form-link="member">Be a Member</a>
         </div>
       </div>
     </div>
-    <div class="scroll-cue" aria-hidden="true"><span>Scroll</span><span class="rail"></span></div>
+    <div class="carousel-controls" aria-label="Carousel controls">
+      <button class="carousel-arrow" type="button" data-carousel-prev aria-label="Previous picture">&#8592;</button>
+      <div class="carousel-dots" role="group" aria-label="Choose a picture">
+        <button class="carousel-dot is-active" type="button" data-carousel-dot="0" aria-label="Show picture 1" aria-current="true"></button>
+        <button class="carousel-dot" type="button" data-carousel-dot="1" aria-label="Show picture 2"></button>
+        <button class="carousel-dot" type="button" data-carousel-dot="2" aria-label="Show picture 3"></button>
+      </div>
+      <button class="carousel-arrow" type="button" data-carousel-next aria-label="Next picture">&#8594;</button>
+    </div>
+  </section>
+
+  <!-- ===================== MEMBER JOURNEY ===================== -->
+  <section class="journey-section">
+    <div class="container journey-inner reveal">
+      <span class="eyebrow">Join the Community</span>
+      <h2>Start your journey as an EIT member</h2>
+      <p>Become part of a community using music to inspire, connect, and create meaningful experiences across Singapore.</p>
+      <a href="contact.html#contactForm" class="btn btn-primary" data-form-link="member">Be a Member</a>
+    </div>
   </section>
 
   <!-- ===================== MISSION ===================== -->
@@ -139,77 +168,31 @@
     </div>
   </section>
 
-  <!-- ===================== JOIN US / GALLERY ===================== -->
-  <section class="pad-y" style="background: var(--cream-2);">
-    <div class="container">
-      <div class="section-head center reveal">
-        <span class="eyebrow">Join Us in the Music</span>
-        <h2>Every Voice Adds a <span class="gold-word">Note</span></h2>
-        <p>From the pure joy of a first melody to the power of collective expression — this is what we nurture.</p>
+  <!-- ===================== VISION ===================== -->
+  <section class="vision-section pad-y">
+    <div class="container vision-grid">
+      <div class="vision-intro reveal">
+        <span class="eyebrow">Our Vision</span>
+        <h2>Music that brings people together</h2>
+        <p>We envision a Singapore community where music creates accessible opportunities for enrichment, expression, and genuine human connection.</p>
       </div>
-      <div class="card-grid">
-        <article class="media-card reveal" data-delay="1">
-          <img src="assets/img/gallery-01-joyful-enrichment.png" alt="Joyful Enrichment" loading="lazy" />
-          <div class="media-card__overlay">
-            <span class="media-card__counter">01</span>
-            <h3 class="media-card__title">Joyful Enrichment</h3>
-            <p class="media-card__desc">Capturing the pure joy of music in our programs.</p>
-          </div>
+      <div class="vision-points">
+        <article class="vision-point reveal" data-delay="1">
+          <span>Empower</span>
+          <h3>Young musicians</h3>
+          <p>Help musicians use their talents to create positive change.</p>
         </article>
-        <article class="media-card reveal" data-delay="2">
-          <img src="assets/img/gallery-02-artisanal-craft.jpg" alt="Artisanal Craft" loading="lazy" />
-          <div class="media-card__overlay">
-            <span class="media-card__counter">02</span>
-            <h3 class="media-card__title">Artisanal Craft</h3>
-            <p class="media-card__desc">The beauty of high-quality musical instruments.</p>
-          </div>
+        <article class="vision-point reveal" data-delay="2">
+          <span>Inspire</span>
+          <h3>Shared experiences</h3>
+          <p>Open pathways for performances, events, and musical learning.</p>
         </article>
-        <article class="media-card reveal" data-delay="3">
-          <img src="assets/img/gallery-03-community-connection.jpg" alt="Community Connection" loading="lazy" />
-          <div class="media-card__overlay">
-            <span class="media-card__counter">03</span>
-            <h3 class="media-card__title">Community Connection</h3>
-            <p class="media-card__desc">Building bonds through shared musical experiences.</p>
-          </div>
-        </article>
-        <article class="media-card reveal" data-delay="1">
-          <img src="assets/img/gallery-04-inspiring-change.jpg" alt="Inspiring Change" loading="lazy" />
-          <div class="media-card__overlay">
-            <span class="media-card__counter">04</span>
-            <h3 class="media-card__title">Inspiring Change</h3>
-            <p class="media-card__desc">Empowering individuals to find their voice.</p>
-          </div>
-        </article>
-        <article class="media-card reveal" data-delay="2">
-          <img src="assets/img/gallery-05-shared-inspiration.jpg" alt="Shared Inspiration" loading="lazy" />
-          <div class="media-card__overlay">
-            <span class="media-card__counter">05</span>
-            <h3 class="media-card__title">Shared Inspiration</h3>
-            <p class="media-card__desc">The power of collective musical expression.</p>
-          </div>
-        </article>
-        <article class="media-card reveal" data-delay="3">
-          <img src="assets/img/gallery-06-artistic-expression.jpg" alt="Artistic Expression" loading="lazy" />
-          <div class="media-card__overlay">
-            <span class="media-card__counter">06</span>
-            <h3 class="media-card__title">Artistic Expression</h3>
-            <p class="media-card__desc">Exploring the depths of musical artistry.</p>
-          </div>
+        <article class="vision-point reveal" data-delay="3">
+          <span>Connect</span>
+          <h3>Our community</h3>
+          <p>Bring people together through music and meaningful participation.</p>
         </article>
       </div>
-      <div class="reveal" style="text-align:center; margin-top:48px;">
-        <a href="contact.html" class="btn btn-primary">Volunteer with us</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== BANNER ===================== -->
-  <section class="banner">
-    <div class="banner__bg"><img src="assets/img/mission-bg.jpg" alt="" loading="lazy" /></div>
-    <div class="container">
-      <span class="eyebrow reveal">Together</span>
-      <h2 class="reveal" data-delay="1">Empower. <span class="tagline-words">Inspire.</span> Together.</h2>
-      <a href="contact.html" class="btn btn-light reveal" data-delay="2">Join the Movement</a>
     </div>
   </section>
 
@@ -226,6 +209,7 @@
         <a href="index.html">Home</a>
         <a href="about.html">About The EIT Project</a>
         <a href="initiatives.html">Initiatives</a>
+        <a href="support.html">Support</a>
         <a href="contact.html">Get Involved &amp; Contact Us</a>
       </div>
       <div class="footer-col">
@@ -248,6 +232,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=20260822-1"></script>
+  <script src="js/main.js?v=20260822-2"></script>
 </body>
 </html>

@@ -25,6 +25,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://theeitproject.com/support.html</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://theeitproject.com/events/f1-grand-prix-performance.html</loc>
     <lastmod>2026-08-22</lastmod>
     <changefreq>weekly</changefreq>
