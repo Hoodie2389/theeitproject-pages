@@ -611,10 +611,10 @@ form legend { font-family: var(--font-display); font-size: 1.5rem; padding: 0 12
     box-shadow: none;
   }
   .site-header.scrolled {
-    background: rgba(250, 247, 240, .97);
-    -webkit-backdrop-filter: blur(16px);
-    backdrop-filter: blur(16px);
-    box-shadow: 0 4px 18px rgba(31, 27, 21, .08);
+    background: linear-gradient(180deg, rgba(250, 247, 240, .96) 0%, rgba(250, 247, 240, .76) 58%, rgba(250, 247, 240, 0) 100%);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    box-shadow: none;
   }
   .hamburger { display: flex; }
   .site-header .nav-cta { display: none; }
