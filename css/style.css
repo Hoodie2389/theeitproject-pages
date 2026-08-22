@@ -865,13 +865,30 @@ form legend { font-family: var(--font-display); font-size: 1.5rem; padding: 0 12
   .nav-links a { font-size: 1.25rem; padding: 14px 16px; width: 100%; }
   .nav-mobile-actions {
     display: grid;
-    width: 100%;
-    gap: 10px;
-    margin-top: 16px;
-    padding-top: 22px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    width: min(100%, 360px);
+    gap: 8px;
+    margin-top: 12px;
+    padding-top: 18px;
     border-top: 1px solid var(--line-soft);
   }
-  .nav-mobile-actions .btn { text-align: center; }
+  .nav-links .nav-mobile-actions .btn {
+    min-height: 44px;
+    padding: 9px 5px;
+    justify-content: center;
+    text-align: center;
+    font-size: .76rem;
+    line-height: 1.15;
+    box-shadow: none;
+  }
+  .nav-links .nav-mobile-actions .btn-light {
+    background: transparent;
+    border-color: rgba(124,95,50,.42);
+    color: var(--ink);
+  }
+  .nav-links .nav-mobile-actions .btn-gold { color: var(--ink); }
+  .nav-links .nav-mobile-actions .btn-primary { color: var(--cream); }
+  .nav-links .nav-mobile-actions .btn-light:hover { color: var(--cream); }
   .split, .pillars, .card-grid, .values, .chips, .form-row, .stories-grid { grid-template-columns: 1fr; }
   .split__media::before { inset: 12px; }
   .hero__content { text-align: center; margin: 0 auto; }
