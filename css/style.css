@@ -433,6 +433,11 @@ section { position: relative; }
 
 /* ---- Vision ----------------------------------------------------------- */
 .vision-section { background: var(--cream-2); }
+.mission-section .vision-grid {
+  grid-template-columns: minmax(340px, 1.05fr) 2fr;
+  gap: clamp(36px, 5vw, 70px);
+}
+.mission-section .vision-intro h2 { font-size: clamp(2.25rem, 3.5vw, 3.25rem); }
 .vision-grid {
   display: grid;
   grid-template-columns: minmax(240px, .8fr) 2.2fr;
@@ -785,6 +790,7 @@ form legend { font-family: var(--font-display); font-size: 1.5rem; padding: 0 12
   .info-block { text-align: left; }
   .footer-inner { grid-template-columns: 1fr 1fr; }
   .vision-grid { grid-template-columns: 1fr; gap: 42px; }
+  .mission-section .vision-grid { grid-template-columns: 1fr; }
 }
 
 @media (min-width: 761px) and (max-width: 1100px) {
