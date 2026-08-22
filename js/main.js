@@ -20,10 +20,10 @@
   window.addEventListener('resize', onScroll);
 
   /* ---- External application form destinations ------------------------ */
-  /* Add the supplied Google Form URLs here when they are available. */
+  /* Central destinations keep application links consistent site-wide. */
   var formLinks = {
     member: '',
-    volunteer: ''
+    volunteer: 'https://forms.gle/spj6wqDWkSCzgVMh8'
   };
   document.querySelectorAll('[data-form-link]').forEach(function (link) {
     var destination = formLinks[link.getAttribute('data-form-link')];
@@ -43,7 +43,6 @@
     var next = document.querySelector('[data-carousel-next]');
     var currentSlide = 0;
     var carouselTimer;
-    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     var showSlide = function (index) {
       currentSlide = (index + slides.length) % slides.length;
@@ -62,15 +61,13 @@
     var stopCarousel = function () { window.clearInterval(carouselTimer); };
     var startCarousel = function () {
       stopCarousel();
-      if (!reduceMotion) carouselTimer = window.setInterval(function () { showSlide(currentSlide + 1); }, 6000);
+      carouselTimer = window.setInterval(function () { showSlide(currentSlide + 1); }, 5000);
     };
     if (previous) previous.addEventListener('click', function () { showSlide(currentSlide - 1); startCarousel(); });
     if (next) next.addEventListener('click', function () { showSlide(currentSlide + 1); startCarousel(); });
     dots.forEach(function (dot) {
       dot.addEventListener('click', function () { showSlide(Number(dot.getAttribute('data-carousel-dot'))); startCarousel(); });
     });
-    carouselRegion.addEventListener('mouseenter', stopCarousel);
-    carouselRegion.addEventListener('mouseleave', startCarousel);
     carouselRegion.addEventListener('focusin', stopCarousel);
     carouselRegion.addEventListener('focusout', startCarousel);
     document.addEventListener('visibilitychange', function () {
