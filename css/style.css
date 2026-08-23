@@ -929,13 +929,19 @@ form legend { font-family: var(--font-display); font-size: 1.5rem; padding: 0 12
   .hero-placeholder span, .hero-placeholder small { opacity: .34; }
   .hero-slide--photo .hero-slide__image { object-position: center; }
   .hero--carousel {
-    padding: calc(var(--nav-h) + 12px) 12px 18px;
+    padding: var(--nav-h) 0 0;
   }
   .hero--carousel .hero-carousel {
     aspect-ratio: 688 / 291;
-    border-radius: 10px;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
   }
-  .hero--carousel .carousel-controls { margin-top: 12px; }
+  .hero--carousel .carousel-controls {
+    margin-top: 0;
+    padding: 14px 16px 18px;
+    background: var(--cream);
+  }
   .vision-intro { text-align: center; }
   .vision-intro .eyebrow { justify-content: center; }
   .vision-points { grid-template-columns: 1fr; }
